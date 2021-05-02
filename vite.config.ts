@@ -5,8 +5,8 @@ import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/app/",
-  publicDir: "/app/",
+  base: "/sub/",
+  publicDir: "/sub/",
   plugins: [
     reactRefresh(),
     legacy({
@@ -15,7 +15,7 @@ export default defineConfig({
   ],
   build: {
     target: "es2015",
-    outDir: "./dist/app",
+    outDir: "./dist/sub",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
