@@ -1,10 +1,16 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
-// import "../src/index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Register from './pages/user/Register';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div>activities</div>
-  </React.StrictMode>,
+  <StrictMode>
+<BrowserRouter basename='/sub/h5/'>
+<Routes>
+  <Route path="/" element={<div>home</div>}/>
+  <Route path="/register" element={<Register />} />
+</Routes>
+</BrowserRouter>
+  </StrictMode>,
   document.getElementById("root")
 );
