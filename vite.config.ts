@@ -5,8 +5,8 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/sub/',
-  publicDir: '/sub/',
+  base: '/test/sub/',
+  publicDir: '/test/sub/',
   esbuild: {
     jsxInject: `import React from 'react'`
   },
@@ -18,7 +18,7 @@ export default defineConfig({
   ],
   build: {
     target: 'es2015',
-    outDir: './dist/sub',
+    outDir: 'dist/test/sub',
     minify: 'terser',
     rollupOptions: {
       input: {
