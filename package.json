@@ -2,6 +2,7 @@
   "name": "react-ts-vite",
   "version": "0.0.0",
   "scripts": {
+    "preinstall": "node scripts/preinstall",
     "dev": "vite",
     "format": "prettier --write .",
     "build": "tsc && vite build",
