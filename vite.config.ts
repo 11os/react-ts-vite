@@ -1,3 +1,4 @@
+import pptv from '@exclison/postcss-px-to-viewport'
 import { defineConfig } from 'vite'
 import reactRefresh from '@vitejs/plugin-react-refresh'
 import legacy from '@vitejs/plugin-legacy'
@@ -9,6 +10,20 @@ export default defineConfig({
   publicDir: '/test/sub/',
   esbuild: {
     jsxInject: `import React from 'react'`
+  },
+  css: {
+    modules: {
+      generateScopedName: '[local]_[hash:base64:6]'
+    },
+    postcss: {
+      plugins: [
+        pptv({
+          viewportWidth: 375,
+          viewportUnit: 'vw',
+          minPixelValue: 1
+        })
+      ]
+    }
   },
   plugins: [
     reactRefresh(),
