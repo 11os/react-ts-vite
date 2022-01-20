@@ -1,17 +1,17 @@
-# react-ts-view
+# react-ts-vite
+
+当前为实验性质，待多项指标稳定后再进行下一步规划
+
+```
+pnpm + vite + react + antd-mobile-v5
+```
 
 ## install
 
 ```sh
-$ yarn
-$ yarn dev
-$ yarn build
+$ npm i -g pnpm # 强制使用pnpm作为包管理工具
+$ pnpm i # 安装依赖
 ```
-
-## mpa dir
-
-./index.html -> http://localhost:3000/test/sub/index.html
-./h5/index.html -> http://localhost:3000/test/sub/h5/index.html
 
 ## 实用性检查项
 
@@ -35,8 +35,14 @@ $ yarn build
 
 - [ ] 登录注册页 
 - [ ] 微信相关功能 
-- [ ] [jsbridge 协议]
-- [ ] [deeplink 协议]
+- [ ] jsbridge 协议
+- [ ] deeplink 协议
 - [ ] 核心功能单元测试接入
 - [ ] 浏览器端单元测试接入
 - [ ] 状态管理选型
+
+## mpa dir
+
+./index.html -> http://localhost:3000/test/sub/index.html
+./h5/index.html -> http://localhost:3000/test/sub/h5/index.html
+
